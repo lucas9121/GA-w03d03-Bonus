@@ -54,10 +54,14 @@ console.log(dart)
 wolfy[0] = "Gameboy";
 console.log(wolfy)
 
-
 ////////////////////////////////
 // Yell at the Ninja Turtles
 ////////////////////////////////
+const ninjaTurtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo'];
+for (let element of ninjaTurtles){ 
+    element = element.toUpperCase();
+    console.log(element)
+}
 
 
 ////////////////////////////////
