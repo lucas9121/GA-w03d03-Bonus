@@ -143,7 +143,15 @@ console.log(whereIsWaldo)
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
-
+for (let i = 0; i <= 20; i++){
+    if(i % 2 === 0){
+        let response = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."];
+        let randomizer = Math.floor(Math.random() * response.length);
+        console.log(response[randomizer]);
+    } else {
+        console.log('Love me, pet me! HSSSSSS!')
+    }
+}
 
 ////////////////////////////////
 //  Find the Median
