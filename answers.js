@@ -196,13 +196,15 @@ const kristynsCloset = [
       "raybans"
     ]
   ];
-//Alien Attire
-//1. Kristyn's left shoe has traveled through time and space and turned up in Thom's accessories drawer! Remove Kristyn's shoe from the array and save it to the variable kristynsShoe. Use that variable to add Kristyn's lost shoe to Thom's accessories array.
 
+//Alien Attire
 console.log(kristynsCloset)
 console.log(thomsCloset)
 const kristynsShoe = kristynsCloset.splice(0, 1)
 thomsCloset[2].push(kristynsShoe.join(''))
+
+
+//Dress Us Up
 const kristynsRandomizer1 = Math.floor(Math.random() * kristynsCloset.length)
 const kristynsRandomizer2 = Math.floor(Math.random() * kristynsCloset.length)
 const kristynsRandomizer3 = Math.floor(Math.random() * kristynsCloset.length)
@@ -223,3 +225,27 @@ console.log(`Tomorrow, Kristyn will wear ${kristynsCloset[kristynsRandomizer4]},
 console.log(`Yesterday, Thom wore a ${thomsCloset[0][thomsShirtsRandomizer1]} shirt, ${thomsCloset[1][thomsPantsRandomizer1]} pants, and ${thomsCloset[2][thomsAccessoriesRandomizer1]}`)
 console.log(`Today, Thom is wearing a  ${thomsCloset[0][thomsShirtsRandomizer2]} shirt, ${thomsCloset[1][thomsPantsRandomizer2]} pants, and ${thomsCloset[2][thomsAccessoriesRandomizer2]}`)
 console.log(`Tommorrow, Thom will wear a ${thomsCloset[0][thomsShirtsRandomizer3]} shirt, ${thomsCloset[1][thomsPantsRandomizer3]} pants, and ${thomsCloset[2][thomsAccessoriesRandomizer3]}`)
+
+//Dirty Laundry
+for (let i = 0; i < kristynsCloset.length; i++){
+    console.log(`WHIRR: Now washing ${kristynsCloset[i]}`)
+}
+
+//Inventory
+console.log(`Thom's shirts: ${thomsCloset[0][0]}`)
+console.log(`Thom's shirts: ${thomsCloset[0][1]}`)
+console.log(`Thom's shirts: ${thomsCloset[0][2]}`)
+console.log(`Thom's shirts: ${thomsCloset[0][3]}`)
+console.log(`Thom's pants: ${thomsCloset[1][0]}`)
+console.log(`Thom's pants: ${thomsCloset[1][1]}`)
+console.log(`Thom's pants: ${thomsCloset[1][2]}`)
+console.log(`Thom's accessories: ${thomsCloset[2][0]}`)
+console.log(`Thom's accessories: ${thomsCloset[2][1]}`)
+console.log(`Thom's accessories: ${thomsCloset[2][2]}`)
+console.log(`Thom's accessories: ${thomsCloset[2][3]}`)
+
+// or this way
+console.log(`Thom's shirts: ${thomsCloset[0].join(', ')}`)
+console.log(`Thom's pants: ${thomsCloset[1].join(', ')}`)
+console.log(`Thom's accessories: ${thomsCloset[2].join(', ')}`)
+
