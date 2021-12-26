@@ -163,3 +163,63 @@ console.log(nums.length)
 //index starts at 0, so index 12 is the middle
 console.log(`The median number in the nums array is ${nums[12]}`)
 
+////////////////////////////////
+//  Hungry for More?
+////////////////////////////////
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "GA hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+  
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+//Alien Attire
+//1. Kristyn's left shoe has traveled through time and space and turned up in Thom's accessories drawer! Remove Kristyn's shoe from the array and save it to the variable kristynsShoe. Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+
+console.log(kristynsCloset)
+console.log(thomsCloset)
+const kristynsShoe = kristynsCloset.splice(0, 1)
+thomsCloset[2].push(kristynsShoe.join(''))
+const kristynsRandomizer1 = Math.floor(Math.random() * kristynsCloset.length)
+const kristynsRandomizer2 = Math.floor(Math.random() * kristynsCloset.length)
+const kristynsRandomizer3 = Math.floor(Math.random() * kristynsCloset.length)
+const kristynsRandomizer4 = Math.floor(Math.random() * kristynsCloset.length)
+const kristynsRandomizer5 = Math.floor(Math.random() * kristynsCloset.length)
+const thomsShirtsRandomizer1 = Math.floor(Math.random() * thomsCloset[0].length)
+const thomsShirtsRandomizer2 = Math.floor(Math.random() * thomsCloset[0].length)
+const thomsShirtsRandomizer3 = Math.floor(Math.random() * thomsCloset[0].length)
+const thomsPantsRandomizer1 = Math.floor(Math.random() * thomsCloset[1].length)
+const thomsPantsRandomizer2 = Math.floor(Math.random() * thomsCloset[1].length)
+const thomsPantsRandomizer3 = Math.floor(Math.random() * thomsCloset[1].length)
+const thomsAccessoriesRandomizer1 = Math.floor(Math.random() * thomsCloset[2].length)
+const thomsAccessoriesRandomizer2 = Math.floor(Math.random() * thomsCloset[2].length)
+const thomsAccessoriesRandomizer3 = Math.floor(Math.random() * thomsCloset[2].length)
+console.log(`Yesterday, Kristyn was wearing ${kristynsCloset[kristynsRandomizer1]}, with ${kristynsCloset[kristynsRandomizer2]}, and ${kristynsCloset[kristynsRandomizer3]}`)
+console.log(`Today, Kristyn is wearing ${kristynsCloset[kristynsRandomizer2]}, with ${kristynsCloset[kristynsRandomizer1]}, and ${kristynsCloset[kristynsRandomizer4]}`)
+console.log(`Tomorrow, Kristyn will wear ${kristynsCloset[kristynsRandomizer4]}, with ${kristynsCloset[kristynsRandomizer5]}, and ${kristynsCloset[kristynsRandomizer3]}`)
+console.log(`Yesterday, Thom wore a ${thomsCloset[0][thomsShirtsRandomizer1]} shirt, ${thomsCloset[1][thomsPantsRandomizer1]} pants, and ${thomsCloset[2][thomsAccessoriesRandomizer1]}`)
+console.log(`Today, Thom is wearing a  ${thomsCloset[0][thomsShirtsRandomizer2]} shirt, ${thomsCloset[1][thomsPantsRandomizer2]} pants, and ${thomsCloset[2][thomsAccessoriesRandomizer2]}`)
+console.log(`Tommorrow, Thom will wear a ${thomsCloset[0][thomsShirtsRandomizer3]} shirt, ${thomsCloset[1][thomsPantsRandomizer3]} pants, and ${thomsCloset[2][thomsAccessoriesRandomizer3]}`)
