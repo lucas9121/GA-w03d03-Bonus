@@ -156,3 +156,10 @@ for (let i = 0; i <= 20; i++){
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+console.log(nums.length)
+//length is 25
+//13 is the middle
+//index starts at 0, so index 12 is the middle
+console.log(`The median number in the nums array is ${nums[12]}`)
+
