@@ -67,6 +67,67 @@ for (let element of ninjaTurtles){
 ////////////////////////////////
 // Methods, Revisited
 ////////////////////////////////
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+console.log(`The index of Titanic is ${favMovies.indexOf('Titanic')}`)
+
+//1. use the .sort method
+console.log(favMovies);
+favMovies.sort();
+console.log(favMovies);
+// what did this do to the array?
+//It sorted the array in ascending alphabetical order. 
+
+//Did it permanently alter it?
+//I believe it permanently altered the array, since I can't console log the original
+
+//2. Use the method pop
+favMovies.pop()
+
+//3. push "Guardians of the Galaxy"
+favMovies.push("Guardians of the Galaxy")
+
+
+//4. Reverse the array
+favMovies.reverse()
+
+
+//5. Use the shift method
+favMovies.shift();
+
+
+//6. unshift - what does it return?
+favMovies.unshift();
+//it wont return anything unless I write something inside the parenthesis. If I do write something it will add it as the first element in the index.
+
+//7. splice "Django Unchained" and add "Avatar" (try finding the index of "Django Unchained", instead of counting it yourself)
+console.log(favMovies.indexOf('Django Unchained'))
+favMovies.splice(14, 1, 'Avatar')//index, replace or add (1/0), new element
+//Thought question: did this permanently alter our array?
+//Yes, because it replaced the item.
+
+//8. slice the last half of the array (challenge yourself and try to programatically determine the middle of the array rather than counting it and hard coding it)
+console.log(`There are ${favMovies.length} movies in the favMovies array`)
+favMovies.slice(-9)//starts from the end of the array;
+//Thought question: did this permanently alter our array?
+//No. It made a copy of the elemensts I asked for
+
+//9. store the value of your slice in a variable, console.log it
+let condensedFavMovies = favMovies.slice(-9);
+console.log(condensedFavMovies);
+//Thought question: what is going on here?
+//the copy taken by the slic method was given a new variable
+
+//10. console.log your final results
+console.log(favMovies)
+
+//11. After running the above tasks, console.log the index of "Fast and Furious" 
+console.log(favMovies.indexOf('Fast and Furious'))
+console.log(favMovies.indexOf('Django Unchained'))
+//We removed it from the array, what value do we get when we look for the index of something that is not in the array?
+//Fast and Furious wasn't removed from the array, but when I run Django Unchained (replaced with Avatar) I get a -1 index.
+
+//12. Thought question: that we declared the variable favMovies with const, and yet, we were allowed to change the array. Weird? Should we have used let?
+//No. We didn't change what the variable was equal to (an array). We changed the elements inside the value of the variable. 
 
 
 ////////////////////////////////
