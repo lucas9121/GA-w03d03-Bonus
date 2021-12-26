@@ -101,7 +101,7 @@ favMovies.unshift();
 
 //7. splice "Django Unchained" and add "Avatar" (try finding the index of "Django Unchained", instead of counting it yourself)
 console.log(favMovies.indexOf('Django Unchained'))
-favMovies.splice(14, 1, 'Avatar')//index, replace or add (1/0), new element
+favMovies.splice(14, 1, 'Avatar')//index, remove or add (1/0), new element (optional)
 //Thought question: did this permanently alter our array?
 //Yes, because it replaced the item.
 
@@ -129,11 +129,16 @@ console.log(favMovies.indexOf('Django Unchained'))
 //12. Thought question: that we declared the variable favMovies with const, and yet, we were allowed to change the array. Weird? Should we have used let?
 //No. We didn't change what the variable was equal to (an array). We changed the elements inside the value of the variable. 
 
-
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
-
+const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
+                    ["Lucinda", "Jacc", "Neff", "Snoop"],
+                    ["Petunia", ["Baked Goods", "Waldo"]]];
+whereIsWaldo.splice(1, 1)
+whereIsWaldo[1][2] = "No One"
+console.log(`I found ${whereIsWaldo[2][1][1]}!`)
+console.log(whereIsWaldo)
 
 ////////////////////////////////
 //  Excited Kitten
